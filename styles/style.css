@@ -62,8 +62,9 @@ form {
 .item { padding-bottom: 5px; }
 
 /* style by action */
-input[type=text]:focus {
-  /* border: 3px solid #4682B4; */
+input:focus {
+  outline: 1px solid #AAFFAA;
+  box-shadow: 0 0 2pt 1pt #AAFFAA;
 }
 
 a:hover { color: yellow; }

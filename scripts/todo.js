@@ -1,7 +1,7 @@
 // global definitions
 var task_count = 0; // counts all items that ever existed (never decreases)
 var tidy_count = 0; // number of struck items on list
-var initial_items = ["Add a new task", "Cross something off"]
+var initial_items = ["Add a new task", "Cross something off"];
 
 // functions
 function initialize_list(){
@@ -50,7 +50,10 @@ function remove_struck(){
   }
   document.getElementById('tidy_button0').style.visibility = 'hidden';
   tidy_count = 0;
+  focus_on_text()
 }
+
+function focus_on_text(){ document.getElementById("text_input0").focus(); }
 
 function add_task(){
   var item_text = document.getElementById('text_input0');
@@ -67,10 +70,7 @@ function add_task(){
     document.getElementById('list0').appendChild(div);
     document.getElementById('text_input0').value = '';
   }
-}
-
-function function1(id){
-  document.getElementById(id).style.textDecoration = 'line-through';
+  focus_on_text()
 }
 
 function strike(id){
@@ -93,8 +93,6 @@ function strike(id){
 }
 
 // unused code
-function test_alert(){
-  alert('This is a test alert!');
-}
+function test_alert(){ alert('This is a test alert!'); }
 
 
