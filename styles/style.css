@@ -1,0 +1,86 @@
+/* comment */
+/* last declared property/values win */
+
+/* || GENERAL STYLES */
+/* style by tag */
+body {
+  color: #AAFFAA; /* mint greenish */
+  background: #002020; /* dark greenish */
+  font-family: Garamond, Verdana, Arial;
+  font-size: 20px;
+}
+
+h3 { text-decoration: underline; }
+
+form {
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+/* style by id */
+#tidy_button { visibility: hidden; }
+
+/* style by class */
+.sidebar {
+  height: 100%;
+  width: 35px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2E8B57;
+  overflow-x: hidden;
+}
+
+.main { margin-left: 60px; }/* Same as the width of the sidenav */
+
+.form_text {
+  border: 3px solid #2E8B57;
+  background-color: #153535; /* DCDCDC; */
+  color: #AAFFAA;
+  font-family: Garamond, Verdana, Arial;
+  font-size: 20px;
+}
+
+.list_title {
+  font-size: 22px;
+  text-decoration: underline;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+
+.list {
+  width: 249px;
+  background-color: #153535;
+  padding-top: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 50px;
+  /*
+  border: thin dashed #2E8B57;
+  border-top: thin dashed #2E8B57;
+  border-bottom: thin dashed #2E8B57;
+
+  border-right: thin dashed #2E8B57;
+  */
+  border-left: dashed #2E8B57;
+}
+
+.item { padding-bottom: 5px; }
+
+/* style by situation */
+
+input[type=text]:focus {
+  /* border: 3px solid #4682B4; */
+}
+
+
+a:hover { color: yellow; }
+
+:link { color: lime; }
+:visited { color: lime; }
+
+div.item:hover { cursor: pointer; }
+
+
