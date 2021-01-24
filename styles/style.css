@@ -67,10 +67,9 @@ input:focus {
   box-shadow: 0 0 2pt 1pt #AAFFAA;
 }
 
-a:hover { color: yellow; }
+input[type="submit"]:hover { cursor: pointer; }
 
-:link { color: lime; }
-:visited { color: lime; }
+input[type="button"]:hover { cursor: pointer; }
 
 div.item:hover { cursor: pointer; }
 
