@@ -1,11 +1,10 @@
 /* comment */
-/* last declared property/values win */
+/* last-declared properties/values win */
 
-/* || GENERAL STYLES */
 /* style by tag */
 body {
-  color: #AAFFAA; /* mint greenish */
-  background: #002020; /* dark greenish */
+  color: #AAFFAA; /* mint green */
+  background: #002020; /* dark green */
   font-family: Garamond, Verdana, Arial;
   font-size: 20px;
 }
@@ -18,7 +17,7 @@ form {
 }
 
 /* style by id */
-#tidy_button { visibility: hidden; }
+#tidy_button0 { visibility: hidden; }
 
 /* style by class */
 .sidebar {
@@ -32,11 +31,11 @@ form {
   overflow-x: hidden;
 }
 
-.main { margin-left: 60px; }/* Same as the width of the sidenav */
+.main { margin-left: 60px; }
 
 .form_text {
   border: 3px solid #2E8B57;
-  background-color: #153535; /* DCDCDC; */
+  background-color: #153535;
   color: #AAFFAA;
   font-family: Garamond, Verdana, Arial;
   font-size: 20px;
@@ -57,24 +56,15 @@ form {
   padding-left: 14px;
   padding-right: 14px;
   padding-bottom: 50px;
-  /*
-  border: thin dashed #2E8B57;
-  border-top: thin dashed #2E8B57;
-  border-bottom: thin dashed #2E8B57;
-
-  border-right: thin dashed #2E8B57;
-  */
   border-left: dashed #2E8B57;
 }
 
 .item { padding-bottom: 5px; }
 
-/* style by situation */
-
+/* style by action */
 input[type=text]:focus {
   /* border: 3px solid #4682B4; */
 }
-
 
 a:hover { color: yellow; }
 

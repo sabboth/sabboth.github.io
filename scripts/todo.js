@@ -1,12 +1,9 @@
-// unfinished
-
 // global definitions
 var task_count = 0; // counts all items that ever existed (never decreases)
 var tidy_count = 0; // number of struck items on list
 var initial_items = ["Add a new task", "Cross something off"]
 
-
-// initialize variable and define functions
+// functions
 function initialize_list(){
   var id_text0 = 'item';
   var id_text;
@@ -28,7 +25,7 @@ function initialize_list(){
 }
 
 function clear_text(){
-  var item1 = document.getElementById('text_input1');
+  var item1 = document.getElementById('text_input0');
   let str1 = 'New task';
   var val = item1.value;
   if (val.localeCompare(str1)==0){
@@ -43,7 +40,7 @@ function remove_struck(){
   for (i = 1; i < task_count1 + 1; i++){
     id_text = id_text0.concat(i.toString(10));
     var item1 = document.getElementById(id_text);
-    if (item1 != null) {
+    if (item1 != null){
       let str1 = 'line-through';
       var decor = item1.style.textDecoration;
       if (decor.localeCompare(str1)==0){
@@ -51,13 +48,13 @@ function remove_struck(){
       }
     }
   }
-  document.getElementById('tidy_button').style.visibility = 'hidden';
+  document.getElementById('tidy_button0').style.visibility = 'hidden';
   tidy_count = 0;
 }
 
 function add_task(){
-  var item_text = document.getElementById('text_input1');
-  if (item_text.value) {
+  var item_text = document.getElementById('text_input0');
+  if (item_text.value){
     task_count = task_count + 1;
     var id_text0 = 'item';
     var id_text;
@@ -68,7 +65,7 @@ function add_task(){
     div.setAttribute('class','item')
     div.setAttribute('onclick','strike(this.id)')
     document.getElementById('list0').appendChild(div);
-    document.getElementById('text_input1').value = '';
+    document.getElementById('text_input0').value = '';
   }
 }
 
@@ -87,11 +84,11 @@ function strike(id){
     item1.style.textDecoration = 'line-through';
     tidy_count = tidy_count + 1;
   }
-  if (tidy_count == 0) {
-    document.getElementById('tidy_button').style.visibility = 'hidden';
+  if (tidy_count == 0){
+    document.getElementById('tidy_button0').style.visibility = 'hidden';
   }
   else{
-    document.getElementById('tidy_button').style.visibility = 'visible';
+    document.getElementById('tidy_button0').style.visibility = 'visible';
   }
 }
 
