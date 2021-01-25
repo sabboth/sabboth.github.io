@@ -3,14 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <meta name="description" content="To-do list">
-  <meta name="keywords" content="to do, list, todo">
+  <meta name="description" content="This is a minimal, yet functional, to-do-list application.">
   <meta name="author" content="Bill Kolodzey">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="scripts/todo.js"></script>
   <title>To-do list</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/style.css" type="text/css" />
+  <script src="scripts/todo.js" async></script>
 </head>
 
 <body onload="initialize_list()">
@@ -19,14 +18,14 @@
 
   <div class="main">
 
-    <form action="javascript:void()" onSubmit="add_task()" class="todo_form" autocomplete="off">
-      <input type="text" id="text_input0" name="text_input1" value="New task" class="form_text" onfocus="clear_text()" size=22>
-      <input type="submit" value="Add" class="form_text">
-      <input type="button" id="tidy_button0" value="Tidy" class="form_text" onclick="remove_struck()">
+    <form class="todo_form" action="javascript:void()" onSubmit="add_task()"  autocomplete="off">
+      <input type="text" class="form_text" id="text_input0" name="text_input0" value="New task"  onfocus="clear_text()" size=22>
+      <input type="submit" class="form_text" value="Add" >
+      <input type="button" class="form_text" id="tidy_button0" value="Tidy"  onclick="remove_struck()">
     </form>
 
-    <div id="list0" class="list" onclick="focus_on_text()">
-      <div class="list_title">To do<div>
+    <div class="list" id="list0" onclick="focus_on_text()">
+      <div class="list_head" id="list_head0" onclick="initialize_date()">To do<div>
       <!-- to-do-list items appear here -->
     </div>
 

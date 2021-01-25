@@ -1,10 +1,10 @@
-/* comment */
 /* last-declared properties/values win */
+/* alphabetize declarations (google-style recommendation) */
 
 /* style by tag */
 body {
-  color: #AAFFAA; /* mint green */
-  background: #002020; /* dark green */
+  background: #002020;  /* dark green */
+  color: #AAFFAA;  /* mint green */
   font-family: Garamond, Verdana, Arial;
   font-size: 20px;
 }
@@ -12,8 +12,8 @@ body {
 h3 { text-decoration: underline; }
 
 form {
-  padding-top: 25px;
   padding-bottom: 30px;
+  padding-top: 25px;
 }
 
 /* style by id */
@@ -21,50 +21,50 @@ form {
 
 /* style by class */
 .sidebar {
+  background-color: #2E8B57;  /* less-mint green */
   height: 100%;
-  width: 35px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
   left: 0;
-  background-color: #2E8B57;
   overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  width: 35px;
+  z-index: 1;
 }
 
 .main { margin-left: 60px; }
 
 .form_text {
+  background-color: #153535;  /* less-dark green */
   border: 3px solid #2E8B57;
-  background-color: #153535;
   color: #AAFFAA;
   font-family: Garamond, Verdana, Arial;
   font-size: 20px;
 }
 
-.list_title {
+.list_head {
   font-size: 22px;
-  text-decoration: underline;
   font-weight: bold;
   padding-top: 5px;
   padding-bottom: 12px;
+  text-decoration: underline;
 }
 
 .list {
-  width: 249px;
   background-color: #153535;
-  padding-top: 10px;
+  border-left: dashed #2E8B57;
+  padding-bottom: 50px;
   padding-left: 14px;
   padding-right: 14px;
-  padding-bottom: 50px;
-  border-left: dashed #2E8B57;
+  padding-top: 10px;
+  width: 249px;
 }
 
 .item { padding-bottom: 5px; }
 
 /* style by action */
 input:focus {
-  outline: 1px solid #AAFFAA;
   box-shadow: 0 0 2pt 1pt #AAFFAA;
+  outline: 1px solid #AAFFAA;
 }
 
 input[type="submit"]:hover { cursor: pointer; }
