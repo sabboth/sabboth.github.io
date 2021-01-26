@@ -5,10 +5,10 @@
 body {
   background: #002020;  /* dark green */
   color: #AAFFAA;  /* mint green */
-  font: 20px Garamond, Verdana, Arial;
+  font: 1.5em Garamond, Verdana, Arial;  /* size family */
 }
 
-form { padding: 25px 0 30px; }
+form { padding: 1em 0 1.5em; }  /* top sides bottom */
 
 /* style by id */
 #tidyButton0 { visibility: hidden; }
@@ -21,41 +21,42 @@ form { padding: 25px 0 30px; }
   overflow-x: hidden;
   position: fixed;
   top: 0;
-  width: 35px;
+  width: 1.5em;
   z-index: 1;
 }
 
-.main { margin-left: 60px; }
+.main { margin-left: 2.5em; }
 
 .formText {
   background-color: #153535;  /* less-dark green */
-  border: 3px solid #2E8B57;
+  border: .125em solid #2E8B57;
   color: #AAFFAA;
-  font: 20px Garamond, Verdana, Arial;
+  font: 1em Garamond, Verdana, Arial;
 }
 
 .list {
   background-color: #153535;
   border-left: dashed #2E8B57;
   cursor: pointer;
-  /* padding: 10px 14px 50px 11px; */
-  padding: 10px 0 50px;
-  width: 277px;
+  padding: 0 0 3em;
+  width: 14em;
 }
 
 .listHead {
-  font-size: 22px;
-  font-weight: bold;
-  padding: 5px 0 9px 14px; /* top right bottom left */
+  font: bold 1.1em Garamond, Verdana, Arial;
+  padding: 0.55em 0.7em 0.4em;  /* top right bottom left */
   text-decoration: underline;
 }
 
-.item { padding: 3px 17px 3px 14px; }
+.item { padding: .125em 0.7em .125em; }
+
+/* style by attribute */
+input[type="text"] { width: 11em; }
 
 /* style by action */
 input:focus {
-  box-shadow: 0 0 2pt 1pt #AAFFAA;
-  outline: 1px solid #AAFFAA;
+  box-shadow: 0 0 .1em .05em #AAFFAA;
+  outline: .05em solid #AAFFAA;
 }
 
 input[type="submit"]:hover { cursor: pointer; }
