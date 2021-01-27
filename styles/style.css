@@ -2,19 +2,13 @@
 /* alphabetize declarations (google-style recommendation) */
 
 /* style by tag */
-body {
-  background: #002020;  /* dark green */
-  color: #AAFFAA;  /* mint green */
-  font: 1.5em Garamond, Verdana, Arial;  /* size family */
-}
+body { font: 1.5em Garamond, Verdana, Arial; }  /* size family */
 
 form { padding: 1em 0 1.5em; }  /* top sides bottom */
 
-a { color: #2E8B57; }
-
 /* style by class */
 .sidebar {
-  background-color: #2E8B57;  /* less-mint green */
+  background-color: #555555;  /* less-mint green */
   height: 100%;
   left: 0;
   overflow-x: hidden;
@@ -24,16 +18,9 @@ a { color: #2E8B57; }
   z-index: 1;
 }
 
-.main { margin-left: 2.5em; }
+.main { margin: 1em 2.5em 0; }
 
-/* style by action */
-input:focus {
-  box-shadow: 0 0 .1em .05em #AAFFAA;
-  outline: .05em solid #AAFFAA;
+.pageTitle {
+  padding: 0.275em;
+  font: 2.3em Garamond, Verdana, Arial;
 }
-
-input[type="submit"]:hover { cursor: pointer; }
-
-input[type="button"]:hover { cursor: pointer; }
-
-a:visited { color: #558B97; }

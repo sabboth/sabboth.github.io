@@ -25,7 +25,8 @@ form { padding: 1em 0 1.5em; }  /* top sides bottom */
   z-index: 1;
 }
 
-.main { margin-left: 2.5em; }
+/* .main { margin-left: 2.5em; } */
+.main { margin: 1em 2.5em 0; }
 
 .formText {
   background-color: #153535;  /* less-dark green */
