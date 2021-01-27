@@ -7,7 +7,7 @@ var positionLookUp = [];
 
 // executed script
 if(typeof(Storage) !== "undefined") {
-  if (localStorage.getItem("toDoListStored")) {
+  if (localStorage.getItem("toDoListStored").length > 2) {
     toDoList = JSON.parse(localStorage.getItem("toDoListStored"));
   } else {
     localStorage.setItem("toDoListStored",JSON.stringify(initialItems))
@@ -61,7 +61,7 @@ function addTask() {
     document.getElementById('list0').appendChild(div)
     toDoList.push(itemText.value)
     toDoList.push('0')
-    document.getElementById('textInput0').value = '';
+    itemText.value = '';
     var position = positionLookUp[taskCount - 1] + 1;
     positionLookUp.push(position)
     taskCount = taskCount + 1;
