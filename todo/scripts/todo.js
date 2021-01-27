@@ -9,6 +9,12 @@ var positionLookUp = [];
 if(typeof(Storage) !== "undefined") {
   if (localStorage.getItem("toDoListStored").length > 2) {
     toDoList = JSON.parse(localStorage.getItem("toDoListStored"));
+    for (i = 0; i < toDoList.length/2; i++) {
+      if (toDoList[2*i+1] == '1') { tidyCount++; }
+    }
+    if (tidyCount > 0) {
+      document.getElementById('tidyButton0').style.visibility = 'visible';
+    }
   } else {
     localStorage.setItem("toDoListStored",JSON.stringify(initialItems))
     toDoList = JSON.parse(JSON.stringify(initialItems));
