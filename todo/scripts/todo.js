@@ -6,12 +6,11 @@ var toDoList = [];
 var positionLookUp = [];
 
 // executed script
-//if (localStorage.getItem("toDoListStored") === null) {
-
 if(typeof(Storage) !== "undefined") {
   if (localStorage.getItem("toDoListStored") === null) {
     toDoList = JSON.parse(JSON.stringify(localStorage.getItem("toDoListStored")));
   } else {
+    localStorage.setItem("toDoListStored",'JSON.stringify(initialItems)')
     toDoList = JSON.parse(JSON.stringify(initialItems));
   }
 } else {
