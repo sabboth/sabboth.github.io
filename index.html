@@ -3,31 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="This is a to-do-list application.">
+  <meta name="description" content="This is my website.">
   <meta name="author" content="Bill Kolodzey">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-do list</title>
+  <title>Bill Kolodzey</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/style.css" type="text/css">
-  <script src="scripts/todo.js" async></script>
 </head>
 
-<body onload="initializeList()">
+<body>
 
   <div class="sidebar"></div>
 
   <div class="main">
+    <p><img src="images/color_logo.bmp"></img><div class="page_head">Bill Kolodzey</div></p>
 
-    <form class="todoForm" action="javascript:void()" onSubmit="addTask()" autocomplete="off">
-      <input type="text" class="formText" id="textInput0" name="textInput0" value="New task" onfocus="clearText()">
-      <input type="submit" class="formText" value="Add">
-      <input type="button" class="formText" id="tidyButton0" value="Tidy" onclick="removeStruck()">
-    </form>
-
-    <div class="list" id="list0" onclick="focusOnText()">
-      <div class="listHead" id="listHead0" onclick="initializeDate()">To do<div>
-      <!-- to-do-list items appear here -->
-    </div>
+    <p>Project: <a href="todo/">To-do list</a></p>
 
   </div>
 

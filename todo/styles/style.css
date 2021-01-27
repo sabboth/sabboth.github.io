@@ -10,7 +10,8 @@ body {
 
 form { padding: 1em 0 1.5em; }  /* top sides bottom */
 
-a { color: #2E8B57; }
+/* style by id */
+#tidyButton0 { visibility: hidden; }
 
 /* style by class */
 .sidebar {
@@ -26,6 +27,32 @@ a { color: #2E8B57; }
 
 .main { margin-left: 2.5em; }
 
+.formText {
+  background-color: #153535;  /* less-dark green */
+  border: .125em solid #2E8B57;
+  color: #AAFFAA;
+  font: 1em Garamond, Verdana, Arial;
+}
+
+.list {
+  background-color: #153535;
+  border-left: dashed #2E8B57;
+  cursor: pointer;
+  padding: 0 0 3em;
+  width: 14em;
+}
+
+.listHead {
+  font: bold 1.1em Garamond, Verdana, Arial;
+  padding: 0.55em 0.7em 0.4em;  /* top right bottom left */
+  text-decoration: underline;
+}
+
+.item { padding: .125em 0.7em .125em; }
+
+/* style by attribute */
+input[type="text"] { width: 11em; }
+
 /* style by action */
 input:focus {
   box-shadow: 0 0 .1em .05em #AAFFAA;
@@ -36,4 +63,4 @@ input[type="submit"]:hover { cursor: pointer; }
 
 input[type="button"]:hover { cursor: pointer; }
 
-a:visited { color: #558B97; }
+

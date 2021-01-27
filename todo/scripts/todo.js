@@ -17,9 +17,9 @@ function initializeList() {
     itemDiv.setAttribute('id',idText)
     itemDiv.setAttribute('class','item')
     itemDiv.setAttribute('onclick','strike(this.id)')
-    document.getElementById('list0').appendChild(itemDiv);
+    document.getElementById('list0').appendChild(itemDiv)
   }
-  // initializeDate();
+  // initializeDate()
 }
 
 function initializeDate() {
@@ -65,7 +65,7 @@ function removeStruck() {
   focusOnText()
 }
 
-function focusOnText() { document.getElementById('textInput0').focus(); }
+function focusOnText() { document.getElementById('textInput0').focus() }
 
 function addTask() {
   var itemText = document.getElementById('textInput0');
@@ -78,7 +78,7 @@ function addTask() {
     div.setAttribute('id',idText)
     div.setAttribute('class','item')
     div.setAttribute('onclick','strike(this.id)')
-    document.getElementById('list0').appendChild(div);
+    document.getElementById('list0').appendChild(div)
     document.getElementById('textInput0').value = '';
   }
   focusOnText()
@@ -103,6 +103,6 @@ function strike(id) {
 }
 
 // unused code
-function testAlert() { alert('This is a test alert!'); }
+function testAlert() { alert('This is a test alert!') }
 
 
