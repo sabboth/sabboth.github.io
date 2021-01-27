@@ -4,13 +4,14 @@ var tidyCount = 0;  // number of struck items on list
 var initialItems = ['Add a new task','0','Cross something off','0'];
 var toDoList = [];
 var positionLookUp = [];
+
 // executed script
 if(typeof(Storage) !== "undefined") {
   if (localStorage.getItem("toDoListStored")) {
+    toDoList = JSON.parse(localStorage.getItem("toDoListStored"));
+  } else {
     localStorage.setItem("toDoListStored",JSON.stringify(initialItems))
     toDoList = JSON.parse(JSON.stringify(initialItems));
-  } else {
-    toDoList = JSON.parse(JSON.stringify(localStorage.getItem("toDoListStored")));
   }
 } else {
   alert('Browser does not support web storage!')
@@ -20,7 +21,6 @@ initializeList()
 
 // functions
 function initializeList() {
-  alert('initialize list')
   var idText;
   var itemText;
   var isStruck;
@@ -59,11 +59,11 @@ function addTask() {
     div.setAttribute('class','item')
     div.setAttribute('onclick','strike(this.id)')
     document.getElementById('list0').appendChild(div)
+    toDoList.push(itemText.value)
+    toDoList.push('0')
     document.getElementById('textInput0').value = '';
     var position = positionLookUp[taskCount - 1] + 1;
     positionLookUp.push(position)
-    toDoList.push(itemText)
-    toDoList.push('0')
     taskCount = taskCount + 1;
   }
   focusOnText()
