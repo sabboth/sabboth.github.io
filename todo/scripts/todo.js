@@ -6,9 +6,16 @@ var toDoList = [];
 var positionLookUp = [];
 
 // executed script
-if (localStorage.getItem("toDoListStored") === null) {
-  toDoList = JSON.parse(JSON.stringify(localStorage.getItem("toDoListStored")));
+//if (localStorage.getItem("toDoListStored") === null) {
+
+if(typeof(Storage) !== "undefined") {
+  if (localStorage.getItem("toDoListStored") === null) {
+    toDoList = JSON.parse(JSON.stringify(localStorage.getItem("toDoListStored")));
+  } else {
+    toDoList = JSON.parse(JSON.stringify(initialItems));
+  }
 } else {
+  alert('Browser does not support web storage!')
   toDoList = JSON.parse(JSON.stringify(initialItems));
 }
 initializeList()
