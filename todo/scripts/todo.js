@@ -4,14 +4,13 @@ var tidyCount = 0;  // number of struck items on list
 var initialItems = ['Add a new task','0','Cross something off','0'];
 var toDoList = [];
 var positionLookUp = [];
-
 // executed script
 if(typeof(Storage) !== "undefined") {
-  if (localStorage.getItem("toDoListStored") === null) {
-    toDoList = JSON.parse(JSON.stringify(localStorage.getItem("toDoListStored")));
-  } else {
-    localStorage.setItem("toDoListStored",'JSON.stringify(initialItems)')
+  if (localStorage.getItem("toDoListStored")) {
+    localStorage.setItem("toDoListStored",JSON.stringify(initialItems))
     toDoList = JSON.parse(JSON.stringify(initialItems));
+  } else {
+    toDoList = JSON.parse(JSON.stringify(localStorage.getItem("toDoListStored")));
   }
 } else {
   alert('Browser does not support web storage!')
@@ -21,6 +20,7 @@ initializeList()
 
 // functions
 function initializeList() {
+  alert('initialize list')
   var idText;
   var itemText;
   var isStruck;
@@ -36,6 +36,10 @@ function initializeList() {
     itemDiv.setAttribute('onclick','strike(this.id)')
     if (isStruck == 1) {
       itemDiv.style.textDecoration = 'line-through';
+    } else if (isStruck == 0) {
+      itemDiv.style.textDecoration = 'none';
+    } else {
+      alert('Unexpected entry in toDoList')
     }
     document.getElementById('list0').appendChild(itemDiv)
     positionLookUp.push(taskCount)
