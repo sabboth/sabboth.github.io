@@ -6,9 +6,9 @@ var toDoList = [];
 var positionLookUp = [];
 
 // executed script
-if(typeof(Storage) !== "undefined") {
-  if ( localStorage.getItem("toDoListStored") && (localStorage.getItem("toDoListStored").length>2) ) {
-    toDoList = JSON.parse(localStorage.getItem("toDoListStored"));
+if(typeof(Storage) !== 'undefined') {
+  if (localStorage.getItem('toDoListStored') && (localStorage.getItem('toDoListStored').length>2)) {
+    toDoList = JSON.parse(localStorage.getItem('toDoListStored'));
     for (i = 0; i < toDoList.length/2; i++) {
       if (toDoList[2*i+1] == '1') { tidyCount++; }
     }
@@ -16,7 +16,7 @@ if(typeof(Storage) !== "undefined") {
       document.getElementById('tidyButton0').style.visibility = 'visible';
     }
   } else {
-    localStorage.setItem("toDoListStored",JSON.stringify(initialItems))
+    localStorage.setItem('toDoListStored',JSON.stringify(initialItems))
     toDoList = JSON.parse(JSON.stringify(initialItems));
   }
 } else {
