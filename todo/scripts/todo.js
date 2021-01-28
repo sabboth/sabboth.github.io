@@ -7,7 +7,7 @@ var positionLookUp = [];
 
 // executed script
 if(typeof(Storage) !== 'undefined') {
-  if (localStorage.getItem('toDoListStored') && (localStorage.getItem('toDoListStored').length>2)) {
+  if (localStorage.getItem('toDoListStored') && (localStorage.getItem('toDoListStored').length > 2)) {
     toDoList = JSON.parse(localStorage.getItem('toDoListStored'));
     for (i = 0; i < toDoList.length/2; i++) {
       if (toDoList[2*i+1] == '1') { tidyCount++; }
