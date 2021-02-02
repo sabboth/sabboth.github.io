@@ -1,5 +1,6 @@
 // global definitions
 var taskCount = 0;  // counts all items that ever existed (never decreases)
+var itemCount = 0;  // current number of items on list
 var tidyCount = 0;  // number of struck items on list
 var initialItems = ['Add a new task','0','Cross something off','0'];
 var toDoList = [];
@@ -10,7 +11,7 @@ if(typeof(Storage) !== 'undefined') {
   if (localStorage.getItem('toDoListStored') && (localStorage.getItem('toDoListStored').length > 2)) {
     toDoList = JSON.parse(localStorage.getItem('toDoListStored'));
     for (i = 0; i < toDoList.length/2; i++) {
-      if (toDoList[2*i+1] == '1') { tidyCount++; }
+      if (toDoList[2*i + 1] == '1') { tidyCount++; }
     }
     if (tidyCount > 0) {
       document.getElementById('tidyButton0').style.visibility = 'visible';
@@ -48,8 +49,9 @@ function initializeList() {
       alert('Unexpected entry in toDoList');
     }
     document.getElementById('list0').appendChild(itemDiv);
-    positionLookUp.push(taskCount);
-    taskCount = taskCount + 1;
+    positionLookUp.push(itemCount);
+    taskCount++;
+    itemCount++;
   }
   localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
 }
@@ -68,9 +70,9 @@ function addTask() {
     toDoList.push(itemText.value);
     toDoList.push('0');
     itemText.value = '';
-    var position = positionLookUp[taskCount - 1] + 1;
-    positionLookUp.push(position);
-    taskCount = taskCount + 1;
+    positionLookUp.push(itemCount);
+    taskCount++;
+    itemCount++;
   }
   focusOnText();
   localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
@@ -107,6 +109,7 @@ function removeStruck() {
       var decor = item.style.textDecoration;
       if (decor.localeCompare('line-through')==0) {
         item.remove();
+        itemCount--;
         toDoList.splice(2*positionLookUp[i],2);
         positionLookUp[i] = -1;
         for (j = i + 1; j < taskCount; j++) {
