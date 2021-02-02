@@ -16,14 +16,14 @@ if(typeof(Storage) !== 'undefined') {
       document.getElementById('tidyButton0').style.visibility = 'visible';
     }
   } else {
-    localStorage.setItem('toDoListStored',JSON.stringify(initialItems))
+    localStorage.setItem('toDoListStored',JSON.stringify(initialItems));
     toDoList = JSON.parse(JSON.stringify(initialItems));
   }
 } else {
-  alert('Browser does not support web storage!')
+  alert('Browser does not support web storage!');
   toDoList = JSON.parse(JSON.stringify(initialItems));
 }
-initializeList()
+initializeList();
 
 // functions
 function initializeList() {
@@ -37,21 +37,21 @@ function initializeList() {
     isStruck = toDoList[2*i + 1];
     var itemDiv = document.createElement('div');
     itemDiv.innerHTML = itemText;
-    itemDiv.setAttribute('id',idText)
-    itemDiv.setAttribute('class','item')
-    itemDiv.setAttribute('onclick','strike(this.id)')
+    itemDiv.setAttribute('id',idText);
+    itemDiv.setAttribute('class','item');
+    itemDiv.setAttribute('onclick','strike(this.id)');
     if (isStruck == 1) {
       itemDiv.style.textDecoration = 'line-through';
     } else if (isStruck == 0) {
       itemDiv.style.textDecoration = 'none';
     } else {
-      alert('Unexpected entry in toDoList')
+      alert('Unexpected entry in toDoList');
     }
-    document.getElementById('list0').appendChild(itemDiv)
-    positionLookUp.push(taskCount)
+    document.getElementById('list0').appendChild(itemDiv);
+    positionLookUp.push(taskCount);
     taskCount = taskCount + 1;
   }
-  localStorage.setItem('toDoListStored',JSON.stringify(toDoList))
+  localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
 }
 
 function addTask() {
@@ -61,19 +61,19 @@ function addTask() {
     idText = 'item' + taskCount;
     var div = document.createElement('div');
     div.innerHTML = itemText.value;
-    div.setAttribute('id',idText)
-    div.setAttribute('class','item')
-    div.setAttribute('onclick','strike(this.id)')
-    document.getElementById('list0').appendChild(div)
-    toDoList.push(itemText.value)
-    toDoList.push('0')
+    div.setAttribute('id',idText);
+    div.setAttribute('class','item');
+    div.setAttribute('onclick','strike(this.id)');
+    document.getElementById('list0').appendChild(div);
+    toDoList.push(itemText.value);
+    toDoList.push('0');
     itemText.value = '';
     var position = positionLookUp[taskCount - 1] + 1;
-    positionLookUp.push(position)
+    positionLookUp.push(position);
     taskCount = taskCount + 1;
   }
-  focusOnText()
-  localStorage.setItem('toDoListStored',JSON.stringify(toDoList))
+  focusOnText();
+  localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
 }
 
 function strike(id) {
@@ -92,11 +92,10 @@ function strike(id) {
   }
   if (tidyCount == 0) {
     document.getElementById('tidyButton0').style.visibility = 'hidden';
-  }
-  else{
+  } else {
     document.getElementById('tidyButton0').style.visibility = 'visible';
   }
-  localStorage.setItem('toDoListStored',JSON.stringify(toDoList))
+  localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
 }
 
 function removeStruck() {
@@ -118,11 +117,11 @@ function removeStruck() {
   }
   document.getElementById('tidyButton0').style.visibility = 'hidden';
   tidyCount = 0;
-  focusOnText()
-  localStorage.setItem('toDoListStored',JSON.stringify(toDoList))
+  focusOnText();
+  localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
 }
 
-function focusOnText() { document.getElementById('textInput0').focus() }
+function focusOnText() { document.getElementById('textInput0').focus(); }
 
 function initializeDate() {
   var listHead = document.getElementById('listHead0');
@@ -151,6 +150,6 @@ function clearText() {
 }
 
 // unused code
-function testAlert() { alert('This is a test alert!') }
+function testAlert() { alert('This is a test alert!'); }
 
 
