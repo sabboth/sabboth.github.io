@@ -1,3 +1,3 @@
 # About me
 
-I am trying to see if I can get markdown to work on github.
+I got markdown to work on my github page.
