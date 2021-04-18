@@ -1,0 +1,67 @@
+/* last-declared properties/values win */
+/* alphabetize declarations (google-style recommendation) */
+
+/* style by tag */
+body {
+  background: #002020;  /* dark green */
+  color: #AAFFAA;  /* mint green */
+  font: 1.5em Garamond, Verdana, Arial;  /* size family */
+}
+
+form { padding: 1em 0 1.5em; }  /* top sides bottom */
+
+/* style by id */
+#tidyButton0 { visibility: hidden; }
+
+/* style by class */
+.sidebar {
+  background-color: #2E8B57;  /* less-mint green */
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  width: 1.5em;
+  z-index: 1;
+}
+
+/* .main { margin-left: 2.5em; } */
+.main { margin: 1em 2.5em 0; }
+
+.formText {
+  background-color: #153535;  /* less-dark green */
+  border: .125em solid #2E8B57;
+  color: #AAFFAA;
+  font: 1em Garamond, Verdana, Arial;
+}
+
+.list {
+  background-color: #153535;
+  border-left: dashed #2E8B57;
+  cursor: pointer;
+  padding: 0 0 3em;
+  width: 14em;
+}
+
+.listHead {
+  font: bold 1.1em Garamond, Verdana, Arial;
+  padding: 0.55em 0.7em 0.4em;  /* top right bottom left */
+  text-decoration: underline;
+}
+
+.item { padding: .125em 0.7em .125em; }
+
+/* style by attribute */
+input[type="text"] { width: 11em; }
+
+/* style by action */
+input:focus {
+  box-shadow: 0 0 .1em .05em #AAFFAA;
+  outline: .05em solid #AAFFAA;
+}
+
+input[type="submit"]:hover { cursor: pointer; }
+
+input[type="button"]:hover { cursor: pointer; }
+
+
