@@ -8,8 +8,8 @@ var positionLookUp = [];
 
 // executed script
 if(typeof(Storage) !== 'undefined') {
-  if (localStorage.getItem('toDoListStored') && (localStorage.getItem('toDoListStored').length > 2)) {
-    toDoList = JSON.parse(localStorage.getItem('toDoListStored'));
+  if (localStorage.getItem('toDoTwoStored') && (localStorage.getItem('toDoTwoStored').length > 2)) {
+    toDoList = JSON.parse(localStorage.getItem('toDoTwoStored'));
     for (i = 0; i < toDoList.length/2; i++) {
       if (toDoList[2*i + 1] == '1') { tidyCount++; }
     }
@@ -17,7 +17,7 @@ if(typeof(Storage) !== 'undefined') {
       document.getElementById('tidyButton0').style.visibility = 'visible';
     }
   } else {
-    localStorage.setItem('toDoListStored',JSON.stringify(initialItems));
+    localStorage.setItem('toDoTwoStored',JSON.stringify(initialItems));
     toDoList = JSON.parse(JSON.stringify(initialItems));
   }
 } else {
@@ -53,7 +53,7 @@ function initializeList() {
     taskCount++;
     itemCount++;
   }
-  localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
+  localStorage.setItem('toDoTwoStored',JSON.stringify(toDoList));
 }
 
 function addTask() {
@@ -75,7 +75,7 @@ function addTask() {
     itemCount++;
   }
   focusOnText();
-  localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
+  localStorage.setItem('toDoTwoStored',JSON.stringify(toDoList));
 }
 
 function strike(id) {
@@ -97,7 +97,7 @@ function strike(id) {
   } else {
     document.getElementById('tidyButton0').style.visibility = 'visible';
   }
-  localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
+  localStorage.setItem('toDoTwoStored',JSON.stringify(toDoList));
 }
 
 function removeStruck() {
@@ -121,7 +121,7 @@ function removeStruck() {
   document.getElementById('tidyButton0').style.visibility = 'hidden';
   tidyCount = 0;
   focusOnText();
-  localStorage.setItem('toDoListStored',JSON.stringify(toDoList));
+  localStorage.setItem('toDoTwoStored',JSON.stringify(toDoList));
 }
 
 function focusOnText() { document.getElementById('textInput0').focus(); }
