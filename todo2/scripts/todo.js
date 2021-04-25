@@ -138,7 +138,7 @@ function initializeDate() {
   var day = n.getDay();
   var dateString = DAYS_OF_WEEK[day] + d + MONTHS_OF_YEAR[m] + y;
   if (headText.localeCompare(dateString)==0) {
-    listHead.innerHTML = 'To do';
+    listHead.innerHTML = '2 do';
   } else {
     listHead.innerHTML = dateString;
   }
