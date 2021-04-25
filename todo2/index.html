@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A second to-do-list application.">
+  <meta name="author" content="Bill Kolodzey">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do two</title>
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
+  <script src="scripts/todo.js" async></script>
+</head>
+
+<body>
+
+  <div class="sidebar"></div>
+
+  <div class="main">
+
+    <div>
+      <a href="../"><img style="vertical-align:text-bottom" src="images/color_logo.bmp" title="Bill Kolodzey Homepage"></a>
+    </div>
+
+    <form class="todoForm" action="javascript:void()" onSubmit="addTask()" autocomplete="off">
+      <input type="text" class="formText" id="textInput0" name="textInput0" value="New task" onfocus="clearText()">
+      <input type="submit" class="formText" value="Add">
+      <input type="button" class="formText" id="tidyButton0" value="Tidy" onclick="removeStruck()">
+    </form>
+
+    <div class="list" id="list0" onclick="focusOnText()">
+      <div class="listHead" id="listHead0" onclick="initializeDate()">2 do<div>
+      <!-- to-do-list items appear here -->
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
+
