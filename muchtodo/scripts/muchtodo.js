@@ -2,27 +2,30 @@
 var taskCount = 0;  // counts all items that ever existed (never decreases)
 var itemCount = 0;  // current number of items on list
 var tidyCount = 0;  // number of struck items on list
-var initialItems = ['Add a new task','0','Cross something off','0'];
+var initialData = ['2','To do','Grocery','Add a new list','0','0','Apples','0','1'];
 var toDoList = [];
 var positionLookUp = [];
+
+// local storage: ["number of lists","1st list",...
+//                 "1st item name","1st item bool","first item list number",...]
 
 // executed script
 if(typeof(Storage) !== 'undefined') {
   if (localStorage.getItem('muchToDoStored') && (localStorage.getItem('muchToDoStored').length > 2)) {
     toDoList = JSON.parse(localStorage.getItem('muchToDoStored'));
-    for (i = 0; i < toDoList.length/2; i++) {
+    for (i = 0; i < toDoData.length/2; i++) {
       if (toDoList[2*i + 1] == '1') { tidyCount++; }
     }
     if (tidyCount > 0) {
       document.getElementById('tidyButton0').style.visibility = 'visible';
     }
   } else {
-    localStorage.setItem('muchToDoStored',JSON.stringify(initialItems));
-    toDoList = JSON.parse(JSON.stringify(initialItems));
+    localStorage.setItem('muchToDoStored',JSON.stringify(initialData));
+    toDoData = JSON.parse(JSON.stringify(initialData));
   }
 } else {
   alert('Browser does not support web storage!');
-  toDoList = JSON.parse(JSON.stringify(initialItems));
+  toDoList = JSON.parse(JSON.stringify(initialData));
 }
 initializeList();
 
@@ -53,7 +56,7 @@ function initializeList() {
     taskCount++;
     itemCount++;
   }
-  localStorage.setItem('muchToDoStored',JSON.stringify(toDoList));
+  localStorage.setItem('muchToDoStored',JSON.stringify(toDoData));
 }
 
 function addTask() {
@@ -75,7 +78,7 @@ function addTask() {
     itemCount++;
   }
   focusOnText();
-  localStorage.setItem('muchToDoStored',JSON.stringify(toDoList));
+  localStorage.setItem('muchToDoStored',JSON.stringify(toDoData));
 }
 
 function strike(id) {
@@ -97,7 +100,7 @@ function strike(id) {
   } else {
     document.getElementById('tidyButton0').style.visibility = 'visible';
   }
-  localStorage.setItem('muchToDoStored',JSON.stringify(toDoList));
+  localStorage.setItem('muchToDoStored',JSON.stringify(toDoData));
 }
 
 function removeStruck() {
@@ -121,7 +124,7 @@ function removeStruck() {
   document.getElementById('tidyButton0').style.visibility = 'hidden';
   tidyCount = 0;
   focusOnText();
-  localStorage.setItem('muchToDoStored',JSON.stringify(toDoList));
+  localStorage.setItem('muchToDoStored',JSON.stringify(toDoData));
 }
 
 function focusOnText() { document.getElementById('textInput0').focus(); }

@@ -6,6 +6,7 @@ var initialItems = ['Add a new task','0','Cross something off','0'];
 var toDoList = [];
 var positionLookUp = [];
 
+// local storage ["first item","first tidy bool",...,"nth item","nth tidy bool"]
 // executed script
 if(typeof(Storage) !== 'undefined') {
   if (localStorage.getItem('toDoTwoStored') && (localStorage.getItem('toDoTwoStored').length > 2)) {
