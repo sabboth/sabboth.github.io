@@ -3,7 +3,7 @@
 
 /* style by tag */
 body {
-  background: #002020;  /* dark green */
+  background: #002020;  /* dark green 00 32 32 */
   color: #AAFFAA;  /* mint green */
   font: 1.5em Garamond, Verdana, Arial;  /* size family */
 }
@@ -31,7 +31,7 @@ form { padding: 1em 0 1.5em; }  /* top sides bottom */
 .formText {
   background-color: #153535;  /* less-dark green */
   border: .125em solid #2E8B57;
-  color: #AAFFAA;
+  color: #AAFFAA;  /* 170 255 170 */
   font: 1em Garamond, Verdana, Arial;
 }
 
