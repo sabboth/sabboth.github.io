@@ -2,13 +2,22 @@
 /* alphabetize declarations (google-style recommendation) */
 
 /* style by tag */
-body { font: 1.5em Garamond, Verdana, Arial; }  /* size family */
+body {
+  font: 1.5em "EB Garamond", Garamond, Verdana, Arial;
+}
 
-form { padding: 1em 0 1.5em; }  /* top sides bottom */
+/* size family */
+
+form {
+  padding: 1em 0 1.5em;
+}
+
+/* top sides bottom */
 
 /* style by class */
 .sidebar {
-  background-color: #555555;  /* less-mint green */
+  background-color: #555555;
+  /* less-mint green */
   height: 100%;
   left: 0;
   overflow-x: hidden;
@@ -18,11 +27,11 @@ form { padding: 1em 0 1.5em; }  /* top sides bottom */
   z-index: 1;
 }
 
-.main { margin: 1em 2.5em 0; }
+.main {
+  margin: 1em 2.5em 0;
+}
 
 .pageTitle {
   padding: 0.275em;
-  font: 2.3em Garamond, Verdana, Arial;
+  font: 2.3em "EB Garamond", Garamond, Verdana, Arial;
 }
-
-
